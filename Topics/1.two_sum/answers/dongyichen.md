@@ -1,3 +1,4 @@
+```javascript
 function getResult(all, value) {
   const obj = {};
   all.forEach((n, idx) => {
@@ -23,6 +24,7 @@ function getResult(all, value) {
     }
   }
 }
+```
 
 codepen: https://codepen.io/rebel-witout-cause/pen/KKgpXab
 
