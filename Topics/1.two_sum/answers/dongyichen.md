@@ -1,6 +1,4 @@
-`const all = [1, 3, 4, 5, 1];
-
-const getResult = (all, value) => {
+function getResult(all, value) {
   const obj = {};
   all.forEach((n, idx) => {
     if (n.toString() in obj && !n.toString() + '|' in obj) {
@@ -25,8 +23,6 @@ const getResult = (all, value) => {
     }
   }
 }
-
-console.log(getResult(all, 2));`
 
 codepen: https://codepen.io/rebel-witout-cause/pen/KKgpXab
 
