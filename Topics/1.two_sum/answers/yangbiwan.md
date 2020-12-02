@@ -26,6 +26,6 @@ function getTwoSum(nums, target) {
 }
 ```
 
-codepan 链接：https://codepen.io/ybwdaisy/pen/bGwNzaO
+codepen 链接：https://codepen.io/ybwdaisy/pen/bGwNzaO
 
 解题思路：先将 `nums` 中所有元素两两相加求和，并将和与索引缓存在数组中，最后循环该数组找到与 `target` 匹配的元素。
