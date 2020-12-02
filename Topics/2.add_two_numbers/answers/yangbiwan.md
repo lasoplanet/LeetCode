@@ -1,5 +1,5 @@
 #### 方法 1——数组
-```
+```javascript
 var addTwoNumbers = function(l1, l2) {
   let len = l1.length > l2.length ? l1.length : l2.length;
   let result = [];
@@ -28,7 +28,7 @@ var addTwoNumbers = function(l1, l2) {
 codepen 链接：https://codepen.io/ybwdaisy/pen/bGwdoxQ
 
 #### 方法 2——链表
-```
+```javascript
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val;
   this.next = next === undefined ? null : next;
@@ -39,7 +39,7 @@ var addTwoNumbers = function(l1, l2) {
   let addOne = false;
   let ln = listNode;
   while(l1 || l2) {
-    let sum = (l1.val || 0) + (l2.val || 0);
+    let sum = (l1 && l1.val || 0) + (l2 && l2.val || 0);
     if (addOne) {
       sum += 1;
     }
@@ -50,8 +50,8 @@ var addTwoNumbers = function(l1, l2) {
       addOne = false;
     }
 
-    l1 = l1.next;
-    l2 = l2.next;
+    l1 = l1 && l1.next;
+    l2 = l2 && l2.next;
 
     ln.val = sum;
     if (l1 || l2) {
