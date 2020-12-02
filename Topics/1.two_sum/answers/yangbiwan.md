@@ -1,6 +1,6 @@
 代码
-```
-function getTwoSum(nums, target) {
+```javascript
+function twoSum(nums, target) {
   let totals = [];
   let len = nums.length;
   for(let i = 0; i < len; i++) {
