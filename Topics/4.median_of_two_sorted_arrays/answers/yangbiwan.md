@@ -1,9 +1,6 @@
+#### 第一种：快速排序
+
 ```javascript
-/**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number}
- */
 var quickSort = function(array) {
     var len = array.length;
     if (len === 0) {
@@ -31,5 +28,45 @@ var findMedianSortedArrays = function(nums1, nums2) {
     } else {
       return sortedArray[(len - 1) / 2];
     }
+};
+```
+
+#### 第二种：使用 array sort 函数
+
+```javascript
+var findMedianSortedArrays = function(nums1, nums2) {
+    var array = nums1.concat(nums2);
+    var sortedArray = array.sort((a, b) => a - b);
+    var len = sortedArray.length;
+    if (len % 2 === 0) {
+      return (sortedArray[len / 2 - 1] + sortedArray[len / 2]) / 2;
+    } else {
+      return sortedArray[(len - 1) / 2];
+    }
+};
+```
+
+#### 第三种：二分查找
+
+```javascript
+
+var binarySearch = function(array, target) {
+  var low = 0;
+  var high = array.length - 1;
+  while(low <= high) {
+    var middle = Math.floor((low + high) / 2);
+    if (target === array[middle]) {
+      return middle;
+    } else if (target > array[middle]) {
+      low = middle + 1;
+    } else {
+      high = middle - 1;
+    }
+  }
+  return -1;
+}
+
+var findMedianSortedArrays = function(nums1, nums2) {
+  
 };
 ```
