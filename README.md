@@ -1,6 +1,6 @@
 ### LeetCode 刷题规则
 
-- 工作日每天上午 10:00 发布 [LeetCode](https://leetcode-cn.com/problemset/all/) 每日一题，题目随机。
+- 工作日每周一周三上午 10:00 发布 [LeetCode](https://leetcode-cn.com/problemset/all/) 一道题目。
 - 参与者当天下班前完成题目，并将答案同步到此 Github 仓库。
 - 每周五周会进行题目解析。
 
