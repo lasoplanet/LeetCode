@@ -5,7 +5,6 @@ var reverse = function(x) {
   let idx = str.length;
   let res = '';
   
-
   while (idx--) {
     if (idx === str.length - 1 && str[idx] === '0') {
       continue;
