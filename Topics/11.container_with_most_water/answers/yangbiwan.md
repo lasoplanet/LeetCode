@@ -12,3 +12,23 @@ var maxArea = function(height) {
     return maxValue;
 };
 ```
+
+#### 解法二：双指针
+```javascript
+var maxArea = function(height) {
+    var maxValue = 0;
+    var len = height.length;
+    var left = 0;
+    var right = len - 1;
+    while(left < right) {
+        var res = Math.min(height[left], height[right]) * (right - left);
+        maxValue = Math.max(res, maxValue);
+        if (height[left] <= height[right]) {
+            ++left;
+        } else {
+            --right;
+        }
+    }
+    return maxValue;
+}
+```
