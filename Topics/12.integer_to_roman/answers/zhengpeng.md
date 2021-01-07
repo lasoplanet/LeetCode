@@ -35,3 +35,20 @@ class Solution {
     }
 }
 ```
+###第二版
+```java
+class Solution {
+    public String intToRoman(int num) {
+        String romanlist[] = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+        int intlist[] = {1000,900,500,400,100,90,50,40,10,9,5,4,1};
+        StringBuilder res = new StringBuilder();
+        for(int i = 0;i<romanlist.length&&num>0;i++) {
+            while(num >= intlist[i]) {
+                num -= intlist[i];
+                res.append(romanlist[i]);
+            }
+        }
+        return res.toString();
+    }
+}
+```
