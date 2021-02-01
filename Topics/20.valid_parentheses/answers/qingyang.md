@@ -1,4 +1,4 @@
-```
+```JavaScript
 /**
  * @param {string} s
  * @return {boolean}
